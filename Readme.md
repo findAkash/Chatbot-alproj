@@ -72,5 +72,3 @@ Follow these steps to run the chatbot project using Docker:
 
 - Customize the `sender` and `message` fields in the example JSON payload according to your testing needs.
 - Ensure that Docker is configured correctly and has access to necessary resources (like ports and volumes) as per your `docker-compose.yml` setup.
-
-This structured `README.md` should provide clear instructions on how to interact with your chatbot endpoint and how to get the project up and running using Docker. Adjust any paths or specific details according to your project's actual setup.
