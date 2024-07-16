@@ -1,0 +1,6 @@
+.config
+.keras
+.rasa
+.vscode
+*__pycache__
+venv

@@ -1,0 +1,33 @@
+version: '3.0'
+
+services:
+  rasa:
+    image: rasa/rasa:3.6.2-full
+    ports:
+      - '5005:5005'
+    volumes:
+      - ./:/app
+      - ./models:/app/models # Mount the models directory
+    command:
+      - run
+      - --cors
+      - '*'
+      - --enable-api
+      - -p
+      - '5005'
+      - --model
+      - /app/models # Specify the model path
+    # deploy:
+    #   replicas: 3
+
+  actions:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 5055
+    volumes:
+      - .:/app # Adjust volume mapping as per your project structure
+    command: ['run', 'actions']
+    # deploy:
+    #   replicas: 3
