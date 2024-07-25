@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 
 intents:
   - greet
@@ -7,27 +7,64 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
+
+  - check_assignment
+  - check_pending_assignment
+  - check_assignment_1
+
+  - check_routine
+  - check_result
+
+  - admin_process
+  - visa_renewal
+  - caf_process
+  - navigo_process
+  - health_insurance
+
+  - user_details
+  - out_of_scope
+
+entities:
+  - PERSON
+
+slots:
+  PERSON:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: PERSON
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: 'Here is something to cheer you up:'
+      image: 'https://i.imgur.com/nGF1K8f.jpg'
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: 'Did that help you?'
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: 'Great, carry on!'
 
   utter_goodbye:
-  - text: "Bye"
+    - text: 'Bye'
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+actions:
+  - action_greet
+  - action_default_fallback
+
+  - action_check_assignment
+  - action_check_pending_assignment
+  - action_check_assignment_1
+
+  - action_admin_process
+  - action_visa_renewal
+  - action_caf_process
+  - action_navigo_process
+  - action_health_insurance
+
+  - action_check_routine
+  - action_check_result
+  - action_get_user_details
 
 session_config:
   session_expiration_time: 60

@@ -1,91 +1,191 @@
-version: "3.1"
+version: '3.1'
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: admin_process
+    examples: |
+      - How do I process my admin paperwork?
+      - What is the procedure for administrative tasks?
+      - I need help with admin processes.
+      - Tell me about the administrative process.
+      - What steps are involved in the admin process?
+
+  - intent: visa_renewal
+    examples: |
+      - How do I renew my visa?
+      - What are the steps for visa renewal?
+      - I need information about visa renewal.
+      - Tell me about the visa renewal process.
+      - How can I renew my visa?
+
+  - intent: caf_process
+    examples: |
+      - What is the process for applying for CAF?
+      - How do I complete the CAF application?
+      - I need details about the CAF process.
+      - Tell me about the CAF application procedure.
+      - How can I apply for CAF?
+
+  - intent: navigo_process
+    examples: |
+      - How do I get a NAVIGO pass?
+      - What is the procedure for obtaining a NAVIGO pass?
+      - I need information about the NAVIGO process.
+      - Tell me how to apply for a NAVIGO pass.
+      - What steps do I need to follow for NAVIGO?
+
+  - intent: health_insurance
+    examples: |
+      - How do I apply for health insurance?
+      - What is the process for getting health insurance?
+      - I need details about health insurance.
+      - Tell me about applying for health insurance.
+      - How can I get health insurance coverage?
+
+  - intent: check_assignment
+    examples: |
+      - What is my assignment status?
+      - Can you show me the details of my assignment?
+      - I want to check my current assignments.
+      - Tell me about my assignment.
+      - How do I view my assignments?
+
+  - intent: check_pending_assignment
+    examples: |
+      - Do I have any pending assignments?
+      - What are my pending assignments?
+      - Show me my pending assignments.
+      - Are there any assignments I need to complete?
+      - List my pending assignments.
+
+  - intent: check_assignment_1
+    examples: |
+      - What are the details of Assignment 1?
+      - Can you give me more information about Assignment 1?
+      - Tell me about Assignment 1.
+      - Show me the details for Assignment 1.
+      - I need information on Assignment 1.
+
+  - intent: check_routine
+    examples: |
+      - What is my daily routine?
+      - Can you show me my routine for today?
+      - Tell me about my schedule.
+      - What does my routine look like?
+      - Show me my daily activities.
+
+  - intent: check_result
+    examples: |
+      - What are my results?
+      - Can you show me my exam results?
+      - I want to check my test results.
+      - Tell me about my grades.
+      - Show me my results for the last exam.
+
+  - intent: user_details
+    examples: |
+      - who is [akash karmacharya](PERSON)?
+      - who is [Akash Karmacharya](PERSON)?
+      - who is [Thomas Broussard](PERSON)?
+      - Who is [Bill Manos](PERSON)?
+      - Who is [Raissa Cabrera](PERSON)?
+      - Who is [Stephanie Chatelet](PERSON)?
+      - can you give me the details of [Pramod Poudel](PERSON).
+      - detail information of [rabina maharjan](PERSON).
+      - extract the information of [rabina adhikari](PERSON).
+      - can you give me details of Mr. [Manoj Shrestha](PERSON)?
+      - Give me the details of [manoj shrestha](PERSON)?
+      - information about the [akash poudel](PERSON)?
+      - detail information of thr [Rabina Maharjan](PERSON)?
+      - [full name](PERSON)
+      - Can you tell me about [John Smith](PERSON)?
+      - What do you know about [Mary Jones](PERSON)?
+
+  - intent: check_pending_assignment
+    examples: |
+      - Do I have any pending assignments?
+      - What are my pending assignments?
+      - Show me my pending assignments.
+      - Are there any assignments I need to complete?
+      - List my pending assignments.
